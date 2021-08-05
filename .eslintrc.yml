@@ -1,0 +1,38 @@
+env:
+  es6: true
+  es2017: true
+  node: true
+extends:
+  # I want to know the best practices for the settings here.
+  # I don't know it, but this so many extends are enough to make it feel non-exemplary.
+  - plugin:yaml/recommended
+  - plugin:markdown/recommended
+  - eslint:recommended
+  - plugin:import/recommended
+  - plugin:import/typescript
+  - plugin:@typescript-eslint/recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - airbnb-typescript/base
+  - plugin:prettier/recommended
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaFeatures:
+    impliedStrict: true
+  ecmaVersion: 2019
+  project: ./tsconfig.json
+root: true
+rules:
+  '@typescript-eslint/consistent-type-imports': warn
+  import/no-extraneous-dependencies:
+    - error
+    - devDependencies:
+        - 'scripts/**.?s'
+  import/order: warn
+  sort-imports:
+    - warn
+    - ignoreCase: true
+      ignoreDeclarationSort: true
+settings:
+  import/resolver:
+    typescript:
+      alwaysTryTypes: true

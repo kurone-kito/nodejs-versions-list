@@ -14,6 +14,12 @@ we’ll periodically convert the contents of the
 npm ci
 ```
 
+## Linting
+
+```sh
+npm run lint
+```
+
 ## License
 
 MIT
