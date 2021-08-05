@@ -12,17 +12,25 @@
     "url": "https://github.com/kurone-kito/nodejs-versions-list/issues"
   },
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.json",
   "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
   "repository": "github:kurone-kito/nodejs-versions-list",
   "scripts": {
     "lint": "eslint --cache --fix --format codeframe .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepack": "node --loader ts-node/esm scripts/index.ts"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@types/app-root-path": "^1.2.4",
+    "@types/node": "^14.17.9",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
+    "app-root-path": "^3.0.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.3.0",
