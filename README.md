@@ -8,6 +8,12 @@ we’ll periodically convert the contents of the
 
 - Node.js >= 14.17
 
+## Install the dependencies
+
+```sh
+npm ci
+```
+
 ## License
 
 MIT
