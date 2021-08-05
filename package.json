@@ -14,8 +14,12 @@
   "license": "MIT",
   "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
   "repository": "github:kurone-kito/nodejs-versions-list",
-  "scripts": {},
-  "devDependencies": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1"
+  },
   "engines": {
     "node": ">=14.17"
   },
