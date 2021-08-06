@@ -1,0 +1,57 @@
+{
+  "name": "@kurone-kito/nodejs-versions-list",
+  "version": "0.1.0",
+  "description": "Since getting a list of Node.js version numbers is tedious, we'll periodically convert the contents of the official dist into JSON.",
+  "keywords": [
+    "json",
+    "nodejs",
+    "versions"
+  ],
+  "homepage": "https://github.com/kurone-kito/nodejs-versions-list#readme",
+  "bugs": {
+    "url": "https://github.com/kurone-kito/nodejs-versions-list/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.json",
+  "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
+  "repository": "github:kurone-kito/nodejs-versions-list",
+  "scripts": {
+    "lint": "eslint --cache --fix --format codeframe .",
+    "prepare": "husky install",
+    "prepack": "node --loader ts-node/esm scripts/index.ts"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/app-root-path": "^1.2.4",
+    "@types/node": "^14.17.9",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "all-node-versions": "^9.0.0",
+    "app-root-path": "^3.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-markdown": "^2.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-yaml": "^0.5.0",
+    "husky": "^7.0.1",
+    "md5-file": "^5.0.0",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5",
+    "typescript-eslint-language-service": "^4.1.4"
+  },
+  "engines": {
+    "node": ">=14.17"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module"
+}
